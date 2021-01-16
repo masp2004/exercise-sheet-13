@@ -1,8 +1,7 @@
 package de.unistuttgart.iste.sqa.pse.exercisesheet11.calculator;
 
 /**
- * 
- *
+ * A Calculator that provides some a variety of mathematical operations. 
  */
 public interface Calculator {
 
@@ -10,15 +9,17 @@ public interface Calculator {
 	 * @ensures summand1 + summand2 <= Integer.MAX_VALUE & summand1 + summand2 >=
 	 * Integer.MIN_VALUE ==> \result summand1 + summand2
 	 * 
-	 * @ensures summand1 + summand2 > Integer.MAX_VALUE ==> overflow
+	 * @ensures summand1 + summand2 > Integer.MAX_VALUE ==> \result =
+	 * Integer.MIN_VALUE + (summand1 + summand2 - Integer.MAX_VALUE) - 1
 	 * 
-	 * @ensures summand1 + summand2 < Integer.MIN_VALUE ==> underflow
+	 * @ensures summand1 + summand2 < Integer.MIN_VALUE ==> \result =
+	 * Integer.MAX_VALUE - (summand1 + summand2 + Integer.MAX_VALUE) + 1
 	 */
 	/**
 	 * calculate the sum of two integer values.
 	 * 
-	 * if the sum is greater than {@linkplain Integer#MAX_VALUE Integer.MAX_VALUE} a
-	 * overflow happens and if the sum smaller than {@linkplain Integer#MIN_VALUE
+	 * if the sum is greater than {@linkplain Integer#MAX_VALUE Integer.MAX_VALUE} an
+	 * overflow happens and if the sum is smaller than {@linkplain Integer#MIN_VALUE
 	 * Integer.MIN_VALUE} an underflow happens
 	 * 
 	 * @param summand1 first summand
@@ -29,7 +30,11 @@ public interface Calculator {
 
 	/*
 	 * @ensures divisor != 0 ==> \result = correctly rounded quotient
+	 * 
 	 * @ensures divisor = 0 ==> exception
+	 * 
+	 * @ensures dividend = Integer.MIN_VALUE & divisor = -1 ==> \result =
+	 * Integer.MIN_VALUE
 	 */
 	/**
 	 * Calculates the quotient of two integer values.

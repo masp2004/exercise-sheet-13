@@ -9,7 +9,7 @@ final class BuggyCalculator implements Calculator {
 
 	@Override
 	public int add(final int summand1, final int summand2) {
-		return Math.addExact(summand1, summand2);
+		return summand1 + summand2;
 	}
 
 	@Override
