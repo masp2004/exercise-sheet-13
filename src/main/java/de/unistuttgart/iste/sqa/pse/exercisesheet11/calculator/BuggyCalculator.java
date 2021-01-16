@@ -46,4 +46,35 @@ final class BuggyCalculator implements Calculator {
 		int sign = (dividend / Math.abs(dividend)) * (divisor / Math.abs(divisor));
 		return sign;
 	}
+	
+	/**
+	 * 
+	 * @ensures summand1 + summand2 < Integer.MAX_Value 
+	 * 
+	 * calculates the sum of two integer values 
+	 * 
+	 * if summand1 + summand2 < Integer.MAX_VALUE || summand1 + summand2 > Integer.MIN_VALUE  else throws an 
+	 * Arithmetic Exception 
+	 * 
+	 * @param summand1 first summand
+	 * @param summand2 second summand
+	 * 
+	 * @return sum of summand1 and summand2 
+	 * 
+	 */
+	public int addExcat (int summand1, int summand2)  {
+		return 0;
+	}
+	
+	/**
+	 * calculates absolute value of a given integer or throws an Arithmetic Exception
+	 * 
+	 * @param integer value
+	 * @return absolute value 
+	 */
+	public int abs (int value)  {
+		return 0;
+	}
+	
+	
 }
