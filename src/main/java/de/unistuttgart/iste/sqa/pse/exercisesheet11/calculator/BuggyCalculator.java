@@ -9,7 +9,7 @@ final class BuggyCalculator implements Calculator {
 
 	@Override
 	public int add(final int summand1, final int summand2) {
-		return Math.addExact(summand1, summand2);
+		return summand1 + summand2;
 	}
 
 	@Override
@@ -30,10 +30,10 @@ final class BuggyCalculator implements Calculator {
 	}
 	
 	/*
-	 * @ensures dividend < 0 & divisor < 0 & ==> \result = 1
-	 * @ensures dividend > 0 & divisor > 0 & ==> \result = 1
-	 * @ensures dividend < 0 & divisor > 0 & ==> \result = -1
-	 * @ensures dividend > 0 & divisor < 0 & ==> \result = -1 
+	 * @ensures dividend < 0 & divisor < 0 ==> \result = 1
+	 * @ensures dividend > 0 & divisor > 0 ==> \result = 1
+	 * @ensures dividend < 0 & divisor > 0 ==> \result = -1
+	 * @ensures dividend > 0 & divisor < 0 ==> \result = -1 
 	 */
 	/**
 	 * calculates the sign of the result when dividing or multiplying to integer numbers
