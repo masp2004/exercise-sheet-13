@@ -30,10 +30,10 @@ final class BuggyCalculator implements Calculator {
 	}
 	
 	/*
-	 * @ensures dividend < 0 & divisor < 0 & ==> \result = 1
-	 * @ensures dividend > 0 & divisor > 0 & ==> \result = 1
-	 * @ensures dividend < 0 & divisor > 0 & ==> \result = -1
-	 * @ensures dividend > 0 & divisor < 0 & ==> \result = -1 
+	 * @ensures dividend < 0 & divisor < 0 ==> \result = 1
+	 * @ensures dividend > 0 & divisor > 0 ==> \result = 1
+	 * @ensures dividend < 0 & divisor > 0 ==> \result = -1
+	 * @ensures dividend > 0 & divisor < 0 ==> \result = -1 
 	 */
 	/**
 	 * calculates the sign of the result when dividing or multiplying to integer numbers
