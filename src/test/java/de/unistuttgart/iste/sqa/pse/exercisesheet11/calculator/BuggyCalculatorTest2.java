@@ -16,37 +16,62 @@ public class BuggyCalculatorTest2 {
 	}
 
 	@Test
-	public void test1() {
-		int result = calculator.addExcat(25, 41);
-		assertEquals(65, result);
+	public void testAddExcat() {
+		int result = calculator.addExact(25, 41);
+		assertEquals(66, result);
 
 	}
 
 	@Test(expected = ArithmeticException.class)
 	public void test2() {
-		calculator.addExcat(Integer.MAX_VALUE, 1);
+		calculator.addExact(Integer.MAX_VALUE, 1);
 	}
 
 	@Test(expected = ArithmeticException.class)
 	public void test3() {
-		calculator.addExcat(Integer.MIN_VALUE, -1);
+		calculator.addExact(Integer.MIN_VALUE, -1);
 	}
 
 	@Test
 	public void test4() {
-		int result = calculator.abs(42);
-		assertEquals(42, result);
+		int result = calculator.abs(3);
+		assertEquals(3, result);
 	}
 
 	@Test
 	public void test5() {
-		int result = calculator.abs(-65);
-		assertEquals(65, result);
+		int result = calculator.abs(-4);
+		assertEquals(4, result);
 	}
 
 	@Test(expected = ArithmeticException.class)
 	public void test6() {
 		calculator.abs(Integer.MIN_VALUE);
+	}
+
+	@Test
+	public void test7() {
+		int result = calculator.addExact(-2, -4);
+		assertEquals(-6, result);
+	}
+
+	@Test
+	public void test8() {
+		int result = calculator.addExact(0, 0);
+		assertEquals(0, result);
+
+	}
+
+	@Test
+	public void test9() {
+		int result = calculator.abs(0);
+		assertEquals(0, result);
+	}
+
+	@Test
+	public void test10() {
+		int result = calculator.abs(Integer.MAX_VALUE);
+		assertEquals(Integer.MAX_VALUE, result);
 	}
 
 }

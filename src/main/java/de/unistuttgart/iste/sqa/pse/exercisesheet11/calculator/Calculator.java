@@ -50,6 +50,11 @@ public interface Calculator {
 	 */
 	public int divide(int dividend, int divisor);
 	
+	
+	/**
+	 * Operations for exercise 3
+	 */
+	
 	/**
 	 * 
 	 * @ensures summand1 + summand2 < Integer.MAX_Value 
@@ -57,7 +62,7 @@ public interface Calculator {
 	 * calculates the sum of two integer values 
 	 * 
 	 * if summand1 + summand2 < Integer.MAX_VALUE || summand1 + summand2 > Integer.MIN_VALUE  else throws an 
-	 * Arithmetic Exception 
+	 * Arithmetic Exception is thrown
 	 * 
 	 * @param summand1 first summand
 	 * @param summand2 second summand
@@ -65,7 +70,7 @@ public interface Calculator {
 	 * @return sum of summand1 and summand2 
 	 * 
 	 */
-	public int addExcat (int summand1, int summand2);
+	public int addExact (final int summand1, final int summand2);
 	
 	
 	/**
@@ -74,6 +79,6 @@ public interface Calculator {
 	 * @param integer value
 	 * @return absolute value 
 	 */
-	public int abs (int value);
+	public int abs (final int value);
 
 }

@@ -62,7 +62,7 @@ final class BuggyCalculator implements Calculator {
 	 * @return sum of summand1 and summand2 
 	 * 
 	 */
-	public int addExcat (int summand1, int summand2)  {
+	public int addExact (int summand1, int summand2)  {
 		return 0;
 	}
 	
