@@ -49,7 +49,7 @@ final class BuggyCalculator implements Calculator {
 	 * @param m the second number
 	 * @return -1 if the result is smaller than 0, 1 otherwise
 	 */
-	private int getResultSign(int dividend, int divisor) {
+	private int getResultSign(final int dividend, final int divisor) {
 		if ((dividend < 0 && divisor < 0) || (dividend > 0 && divisor > 0)) {
 			return 1;
 		}

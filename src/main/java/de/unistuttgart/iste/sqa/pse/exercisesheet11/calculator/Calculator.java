@@ -53,7 +53,7 @@ public interface Calculator {
 	 *                                  {@linkplain Integer#MIN_VALUE
 	 *                                  Integer.MIN_VALUE}
 	 */
-	public int divide(int dividend, int divisor);
+	public int divide(final int dividend, final int divisor);
 
 	/**
 	 * Operations for exercise 3
