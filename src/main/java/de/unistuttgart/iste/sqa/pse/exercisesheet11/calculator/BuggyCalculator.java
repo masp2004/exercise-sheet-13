@@ -14,6 +14,9 @@ final class BuggyCalculator implements Calculator {
 
 	@Override
 	public int divide(final int dividend, final int divisor) {	
+		if (dividend == Integer.MIN_VALUE || divisor == Integer.MIN_VALUE) {
+			throw new IllegalArgumentException();
+		}
 		if (divisor == 0) {
 			return 0;
 		}
@@ -22,7 +25,7 @@ final class BuggyCalculator implements Calculator {
 		int posQuotient =  posDividend / posDivisor;
 		int posResidual = posDividend % posDivisor;
 		
-		if (2 * posResidual > posDivisor) { 
+		if (2 * posResidual > posDivisor || 2 * posResidual < 0) { 
 			posQuotient++; 
 		}
 		
@@ -31,20 +34,26 @@ final class BuggyCalculator implements Calculator {
 	
 	/*
 	 * @ensures dividend < 0 & divisor < 0 ==> \result = 1
+	 * 
 	 * @ensures dividend > 0 & divisor > 0 ==> \result = 1
+	 * 
 	 * @ensures dividend < 0 & divisor > 0 ==> \result = -1
-	 * @ensures dividend > 0 & divisor < 0 ==> \result = -1 
+	 * 
+	 * @ensures dividend > 0 & divisor < 0 ==> \result = -1
 	 */
 	/**
-	 * calculates the sign of the result when dividing or multiplying to integer numbers
+	 * calculates the sign of the result when dividing or multiplying to integer
+	 * numbers
 	 * 
 	 * @param n the first number
 	 * @param m the second number
 	 * @return -1 if the result is smaller than 0, 1 otherwise
 	 */
 	private int getResultSign(int dividend, int divisor) {
-		int sign = (dividend / Math.abs(dividend)) * (divisor / Math.abs(divisor));
-		return sign;
+		if ((dividend < 0 && divisor < 0) || (dividend > 0 && divisor > 0)) {
+			return 1;
+		}
+		return -1;
 	}
 	
 	/**

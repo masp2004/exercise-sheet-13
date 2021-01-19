@@ -1,7 +1,7 @@
 package de.unistuttgart.iste.sqa.pse.exercisesheet11.calculator;
 
 /**
- * A Calculator that provides some a variety of mathematical operations. 
+ * A Calculator that provides a variety of mathematical operations.
  */
 public interface Calculator {
 
@@ -18,9 +18,9 @@ public interface Calculator {
 	/**
 	 * calculate the sum of two integer values.
 	 * 
-	 * if the sum is greater than {@linkplain Integer#MAX_VALUE Integer.MAX_VALUE} an
-	 * overflow happens and if the sum is smaller than {@linkplain Integer#MIN_VALUE
-	 * Integer.MIN_VALUE} an underflow happens
+	 * if the sum is greater than {@linkplain Integer#MAX_VALUE Integer.MAX_VALUE}
+	 * an overflow happens and if the sum is smaller than
+	 * {@linkplain Integer#MIN_VALUE Integer.MIN_VALUE} an underflow happens
 	 * 
 	 * @param summand1 first summand
 	 * @param summand2 second summand
@@ -29,12 +29,14 @@ public interface Calculator {
 	public int add(final int summand1, final int summand2);
 
 	/*
+	 * @requires divisor != Interger.MIN_VALUE
+	 * 
+	 * @requires dividend != Integer.MIN_VALUE
+	 * 
 	 * @ensures divisor != 0 ==> \result = correctly rounded quotient
 	 * 
-	 * @ensures divisor = 0 ==> exception
-	 * 
-	 * @ensures dividend = Integer.MIN_VALUE & divisor = -1 ==> \result =
-	 * Integer.MIN_VALUE
+	 * @ensures divisor = 0 ==> ArithmeticException
+	 *
 	 */
 	/**
 	 * Calculates the quotient of two integer values.
@@ -46,39 +48,41 @@ public interface Calculator {
 	 * @param dividend number to be divided
 	 * @param divisor  number to divide by
 	 * @return the quotient
-	 * @throws ArithmeticException if {@code divisor} is zero
+	 * @throws ArithmeticException      if {@code divisor} is zero
+	 * @throws IllegalArgumentException if {@code divisor} or {@code dividend} is
+	 *                                  {@linkplain Integer#MIN_VALUE
+	 *                                  Integer.MIN_VALUE}
 	 */
 	public int divide(int dividend, int divisor);
-	
-	
+
 	/**
 	 * Operations for exercise 3
 	 */
-	
+
 	/**
 	 * 
-	 * @ensures summand1 + summand2 < Integer.MAX_Value 
+	 * @ensures summand1 + summand2 < Integer.MAX_Value
 	 * 
-	 * calculates the sum of two integer values 
+	 *          calculates the sum of two integer values
 	 * 
-	 * if summand1 + summand2 < Integer.MAX_VALUE || summand1 + summand2 > Integer.MIN_VALUE  else throws an 
-	 * Arithmetic Exception is thrown
+	 *          if summand1 + summand2 < Integer.MAX_VALUE || summand1 + summand2 >
+	 *          Integer.MIN_VALUE else throws an Arithmetic Exception is thrown
 	 * 
 	 * @param summand1 first summand
 	 * @param summand2 second summand
 	 * 
-	 * @return sum of summand1 and summand2 
+	 * @return sum of summand1 and summand2
 	 * 
 	 */
-	public int addExact (final int summand1, final int summand2);
-	
-	
+	public int addExact(final int summand1, final int summand2);
+
 	/**
-	 * calculates absolute value of a given integer or throws an Arithmetic Exception
+	 * calculates absolute value of a given integer or throws an Arithmetic
+	 * Exception
 	 * 
 	 * @param integer value
-	 * @return absolute value 
+	 * @return absolute value
 	 */
-	public int abs (final int value);
+	public int abs(final int value);
 
 }
