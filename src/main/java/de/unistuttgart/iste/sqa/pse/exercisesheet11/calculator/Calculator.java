@@ -31,19 +31,21 @@ public interface Calculator {
 	/*
 	 * @requires divisor != Interger.MIN_VALUE
 	 * 
+	 * @requires divisor != 0
+	 * 
 	 * @requires dividend != Integer.MIN_VALUE
 	 * 
 	 * @ensures divisor != 0 ==> \result = correctly rounded quotient
 	 * 
-	 * @ensures divisor = 0 ==> ArithmeticException
-	 *
 	 */
 	/**
 	 * Calculates the quotient of two integer values.
 	 * 
 	 * The result is correctly rounded. That is, the result is rounded up for
 	 * decimals greater than or equal to 0.5 and rounded down for decimal smaller
-	 * than 0.5.
+	 * than 0.5. For negative numbers 'down' means towards zero and 'up' means away
+	 * from zero. E.g a result of -42,1 is rounded down to -42 and a result of -42,8
+	 * is rounded up to -43.
 	 *
 	 * @param dividend number to be divided
 	 * @param divisor  number to divide by
