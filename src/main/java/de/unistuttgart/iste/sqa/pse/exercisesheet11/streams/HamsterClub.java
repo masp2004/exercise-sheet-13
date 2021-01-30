@@ -32,8 +32,8 @@ public class HamsterClub implements Club {
 	}
 
 	@Override
-	public int getTotalContributions() {
-		return 0;
+	public Double getTotalContributions() {
+		return 0.0;
 	}
 
 	@Override
