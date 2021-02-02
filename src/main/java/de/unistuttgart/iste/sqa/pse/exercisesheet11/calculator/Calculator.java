@@ -57,33 +57,54 @@ public interface Calculator {
 	 */
 	public int divide(final int dividend, final int divisor);
 
+
 	/**
 	 * Operations for exercise 3
 	 */
 
+	/*
+	 * @ensures summand1 + summand2 <= Integer.MAX_VALUE && summand1 + summand2 >=
+	 * Integer.MIN_VALUE ==> \result summand1 + summand2
+	 * 
+	 */
 	/**
 	 * 
-	 * @ensures summand1 + summand2 < Integer.MAX_Value
+	 * calculates the sum of two integer values
 	 * 
-	 *          calculates the sum of two integer values
-	 * 
-	 *          if summand1 + summand2 < Integer.MAX_VALUE || summand1 + summand2 >
-	 *          Integer.MIN_VALUE else throws an Arithmetic Exception is thrown
+	 * if the sum is greater than the integer range an ArithmeticException is thrown
+	 * with an Error Message. Which indicates that an Integer Overflow occured if
+	 * the sum is lesser than the integer range an ArithmeticException is thrown
+	 * with an Error Message. Which indicates that an Integer Underflow occured
 	 * 
 	 * @param summand1 first summand
 	 * @param summand2 second summand
+	 * @throws ArithmeticException if summand1 + summand2 are greater than
+	 *                             Integer.MAX_Value or summand1 + summand2 are
+	 *                             smaller than Integer.MIN_Value
 	 * 
 	 * @return sum of summand1 and summand2
 	 * 
 	 */
 	public int addExact(final int summand1, final int summand2);
 
+	/*
+	 * @requires value != Integer.MIN_Value
+	 * 
+	 * @ensures value >= 0 ==> \result == value
+	 * 
+	 * @ensures value < 0 ==> \result == value*-1
+	 * 
+	 * 
+	 */
 	/**
-	 * calculates absolute value of a given integer or throws an Arithmetic
-	 * Exception
+	 * calculates absolute value of a given integer value
+	 * 
+	 * if the value is equal to minimal Integer Value a Arithmetic Exception is
+	 * thrown because Integer.MIN_Value is not displayable as a positive number
 	 * 
 	 * @param integer value
 	 * @return absolute value
+	 * @throws ArithmeticException if value is equal to Integer.Min_Value
 	 */
 	public int abs(final int value);
 
