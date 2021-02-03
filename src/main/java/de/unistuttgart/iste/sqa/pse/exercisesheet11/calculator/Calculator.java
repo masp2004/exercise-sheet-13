@@ -63,6 +63,10 @@ public interface Calculator {
 	 */
 
 	/*
+	 * @requires summand1 + summand2 >= Integer.MIN_Value
+	 * 
+	 * @requires summand1 + summand2 <= Integer.MAX_Value
+	 * 
 	 * @ensures summand1 + summand2 <= Integer.MAX_VALUE && summand1 + summand2 >=
 	 * Integer.MIN_VALUE ==> \result summand1 + summand2
 	 * 
@@ -104,7 +108,7 @@ public interface Calculator {
 	 * 
 	 * @param integer value
 	 * @return absolute value
-	 * @throws ArithmeticException if value is equal to Integer.Min_Value
+	 * @throws ArithmeticException if value is equal to Integer.MIN_Value
 	 */
 	public int abs(final int value);
 
