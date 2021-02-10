@@ -19,8 +19,8 @@ public interface Calculator {
 	 * calculate the sum of two integer values.
 	 * 
 	 * if the sum is greater than {@linkplain Integer#MAX_VALUE Integer.MAX_VALUE}
-	 * an overflow happens and if the sum is smaller than
-	 * {@linkplain Integer#MIN_VALUE Integer.MIN_VALUE} an overflow happens
+	 * or smaller than {@linkplain Integer#MIN_VALUE Integer.MIN_VALUE} an overflow
+	 * happens
 	 * 
 	 * @param summand1 first summand
 	 * @param summand2 second summand
@@ -56,7 +56,6 @@ public interface Calculator {
 	 *                                  Integer.MIN_VALUE}
 	 */
 	public int divide(final int dividend, final int divisor);
-
 
 	/**
 	 * Operations for exercise 3
