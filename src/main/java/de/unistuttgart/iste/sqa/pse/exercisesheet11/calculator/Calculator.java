@@ -20,7 +20,7 @@ public interface Calculator {
 	 * 
 	 * if the sum is greater than {@linkplain Integer#MAX_VALUE Integer.MAX_VALUE}
 	 * an overflow happens and if the sum is smaller than
-	 * {@linkplain Integer#MIN_VALUE Integer.MIN_VALUE} an underflow happens
+	 * {@linkplain Integer#MIN_VALUE Integer.MIN_VALUE} an overflow happens
 	 * 
 	 * @param summand1 first summand
 	 * @param summand2 second summand
