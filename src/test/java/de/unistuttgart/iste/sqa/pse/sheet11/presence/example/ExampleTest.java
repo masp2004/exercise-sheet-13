@@ -1,10 +1,12 @@
-package de.unistuttgart.iste.sqa.pse.exercisesheet11.example;
+package de.unistuttgart.iste.sqa.pse.sheet11.presence.example;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import de.unistuttgart.iste.sqa.pse.sheet11.presence.example.Example;
 
 /**
  * This class is for explanatory use only. 

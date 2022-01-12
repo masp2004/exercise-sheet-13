@@ -1,4 +1,4 @@
-package de.unistuttgart.iste.sqa.pse.exercisesheet11.example;
+package de.unistuttgart.iste.sqa.pse.sheet11.presence.example;
 
 /**
  * A simple Class with a single attribute and useless operations. For exemplary

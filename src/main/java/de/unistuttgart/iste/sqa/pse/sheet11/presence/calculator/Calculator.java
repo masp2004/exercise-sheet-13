@@ -1,4 +1,4 @@
-package de.unistuttgart.iste.sqa.pse.exercisesheet11.calculator;
+package de.unistuttgart.iste.sqa.pse.sheet11.presence.calculator;
 
 /**
  * A Calculator that provides a variety of mathematical operations.
@@ -74,9 +74,10 @@ public interface Calculator {
 	 * 
 	 * calculates the sum of two integer values
 	 * 
-	 * if the sum is greater than the integer range an ArithmeticException is thrown
-	 * with an Error Message. Which indicates that an Integer Overflow occured if
-	 * the sum is lesser than the integer range an ArithmeticException is thrown
+	 * If the sum is greater than the integer range an ArithmeticException is thrown
+	 * with an Error Message, which indicates that an Integer Overflow occured.
+	 * 
+	 * If the sum is lesser than the integer range an ArithmeticException is thrown
 	 * with an Error Message. Which indicates that an Integer Underflow occured
 	 * 
 	 * @param summand1 first summand

@@ -1,4 +1,4 @@
-package de.unistuttgart.iste.sqa.pse.exercisesheet11.calculator;
+package de.unistuttgart.iste.sqa.pse.sheet11.presence.calculator;
 
 /**
  * 
