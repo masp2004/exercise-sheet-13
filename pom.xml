@@ -2,11 +2,21 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>de.unistuttgart.iste.rss.oo.hamstersimulator</groupId>
-	<artifactId>exercise-sheet-11</artifactId>
-	<name>exercise-sheet-11</name>
+	<artifactId>exercise-sheet-12</artifactId>
+	<name>exercise-sheet-12</name>
     <version>1.0.0</version>
 
+	<properties>
+		<hamster.version>4.3.4</hamster.version>
+    </properties>
+
 	<dependencies>
+		<dependency>
+            <groupId>de.hamstersimulator.objectsfirst</groupId>
+            <artifactId>main</artifactId>
+            <version>${hamster.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
