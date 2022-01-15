@@ -57,6 +57,9 @@ public class TestHamster {
 		game.runGame(hamsterProgram);
 	}
 	
+	/**
+	 * Ignore this method. It is here to make the runGame-Operation for our example-test work properly.
+	 */
 	private InputInterface getInputInterfaceMock() {
 		final InputInterface inputInterface = Mockito.mock(InputInterface.class);
 		return inputInterface;
