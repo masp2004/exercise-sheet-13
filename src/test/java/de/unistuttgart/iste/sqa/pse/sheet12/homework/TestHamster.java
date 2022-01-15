@@ -6,7 +6,9 @@ import java.util.function.Consumer;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
+import de.hamstersimulator.objectsfirst.adapter.InputInterface;
 import de.hamstersimulator.objectsfirst.datatypes.Direction;
 import de.hamstersimulator.objectsfirst.datatypes.Location;
 import de.hamstersimulator.objectsfirst.datatypes.Size;
@@ -23,10 +25,11 @@ public class TestHamster {
 	 */
 	private static final int TERRITORY_SIZE = 4;
 	private HamsterGame game;
-
+	
 	@Before
 	public void init() {
 		game = new HamsterGame();
+		game.getModelViewAdapter().addInputInterface(getInputInterfaceMock());
 
 		final TerritoryBuilder territoryBuilder = game.getNewTerritoryBuilder();
 		territoryBuilder.initializeTerritory(new Size(TERRITORY_SIZE, TERRITORY_SIZE));
@@ -52,6 +55,11 @@ public class TestHamster {
 				assertEquals(0, territory.getTotalGrainCount());
 			};
 		game.runGame(hamsterProgram);
+	}
+	
+	private InputInterface getInputInterfaceMock() {
+		final InputInterface inputInterface = Mockito.mock(InputInterface.class);
+		return inputInterface;
 	}
 
 }
