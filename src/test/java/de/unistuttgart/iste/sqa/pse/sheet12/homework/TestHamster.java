@@ -26,10 +26,12 @@ public class TestHamster {
 	private static final int TERRITORY_SIZE = 4;
 	private HamsterGame game;
 	
-	@Before
-	public void init() {
+	/**
+	 * Test creating a territory via API.
+	 */
+	@Test
+	public void testConfiguredHamsterOnTerritory() {
 		game = new HamsterGame();
-		game.getModelViewAdapter().addInputInterface(getInputInterfaceMock());
 
 		final TerritoryBuilder territoryBuilder = game.getNewTerritoryBuilder();
 		territoryBuilder.initializeTerritory(new Size(TERRITORY_SIZE, TERRITORY_SIZE));
@@ -41,28 +43,16 @@ public class TestHamster {
 
 		game.initialize(territoryBuilder);
 		game.startGame();
+		
+		final Hamster paule = game.getTerritory().getDefaultHamster();
+		/* Check that the territory has size TERRITORY_SIZE as width and length */
+		assertEquals(new Size(TERRITORY_SIZE, TERRITORY_SIZE), game.getTerritory().getTerritorySize());
+		/* Check that Paule is at position (1,0) */
+		assertEquals(Location.ORIGIN, paule.getLocation());
+		/* Check that territory has correct amount of grains on it */
+		assertEquals(0, game.getTerritory().getTotalGrainCount());
+		game.stopGame();
 	}
 
-	/**
-	 * Test creating a territory via API.
-	 */
-	@Test
-	public void testConfiguredHamsterOnTerritory() {
-		Consumer<Territory> hamsterProgram = territory -> {
-				final Hamster paule = territory.getDefaultHamster();
-				assertEquals(new Size(TERRITORY_SIZE, TERRITORY_SIZE), territory.getTerritorySize());
-				assertEquals(Location.ORIGIN, paule.getLocation());
-				assertEquals(0, territory.getTotalGrainCount());
-			};
-		game.runGame(hamsterProgram);
-	}
-	
-	/**
-	 * Ignore this method. It is here to make the runGame-Operation for our example-test work properly.
-	 */
-	private InputInterface getInputInterfaceMock() {
-		final InputInterface inputInterface = Mockito.mock(InputInterface.class);
-		return inputInterface;
-	}
 
 }
