@@ -5,12 +5,16 @@ import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 import java.util.Map;
 
+/*@
+  @ invariant name != null;
+  @ invariant birthday != null;
+  @ invariant gender != null;
+  @ invariant emailAddress != null;
+  @ invariant writtenExam != null;
+  @*/
 /**
  * 
  * Represents a student.
- * 
- * Invariant: name != null, birthday != null, sex != null, emailAdress != null,
- * writtenExam != null;
  * 
  * @author mfrank
  *
@@ -27,17 +31,23 @@ public class Student {
 	private final String emailAddress;
 	private final Map<String, Exam> writtenExams;
 
-	
+	/*@
+	  @ requires name != null;
+	  @ requires birthday != null;
+	  @ requires gender != null;
+	  @ requires email != null;
+	  @*/
 	/**
+	 * Constructor for a Student
 	 * 
-	 * Default Constructor for a Student
-	 * 
-	 * @param name - must not be null
-	 * @param birthday - must not be null
-	 * @param gender - must not be null
-	 * @param email - must not be null
+	 * @param name
+	 * @param birthday
+	 * @param gender
+	 * @param email
+	 * @throws IllegalArgumentExeption if any of name, birthday, gender or email is {@code null}.
 	 */
-	public Student(final String name, final LocalDate birthday, final Sex gender, final String email) {
+	public Student(final String name, final LocalDate birthday, final Sex gender, final String email) 
+		throws IllegalArgumentException {
 
 		if (name == null || birthday == null || gender == null || email == null) {
 			throw new IllegalArgumentException();
@@ -50,14 +60,14 @@ public class Student {
 		this.writtenExams = new HashMap<String, Exam>();
 	}
 
-
 	/**
-	 * Adds an exam to the exam-list of student. It uses a Map an the name of the exam as key. 
+	 * Adds an exam to the exam-list of this student. It uses a map and the name of the exam as key. 
 	 * To get the exam use getExam(key) for a single exam or getWrittenExams() for all.
 	 * 
-	 * @param exam - must not be null
+	 * @param exam
+	 * @throws IllegalArgumentException if exam is {@code null}.
 	 */
-	public void addExam(Exam exam) {
+	public void addExam(final Exam exam) throws IllegalArgumentException {
 
 		if (exam == null) {
 			throw new IllegalArgumentException();
@@ -69,41 +79,38 @@ public class Student {
 	/**
 	 * @return the age in Years (int) of the student. 
 	 */
-	
 	public int getAge() {
-
 		return (int) ChronoUnit.YEARS.between(birthday, LocalDate.now());
 	}
 
-
 	/**
-	 * Returns the exam for a given Name.
+	 * Returns the exam for a given name.
 	 * 
 	 * @param examTag name of the exam 
 	 * @return exam for given key
 	 * 
 	 */
-	public Exam getExam(final String examTag){
+	public /*@ pure @*/ Exam getExam(final String examTag){
 		return writtenExams.get(examTag);
 	}
 
-	public String getName() {
+	public /*@ pure @*/ String getName() {
 		return name;
 	}
 
-	public LocalDate getBirthday() {
+	public /*@ pure @*/ LocalDate getBirthday() {
 		return birthday;
 	}
 
-	public Sex getGender() {
+	public /*@ pure @*/ Sex getGender() {
 		return gender;
 	}
 
-	public String getEmailAddress() {
+	public /*@ pure @*/ String getEmailAddress() {
 		return emailAddress;
 	}
 
-	public Map<String, Exam> getWrittenExams() {
+	public /*@ pure @*/ Map<String, Exam> getWrittenExams() {
 		return writtenExams;
 	}
 
