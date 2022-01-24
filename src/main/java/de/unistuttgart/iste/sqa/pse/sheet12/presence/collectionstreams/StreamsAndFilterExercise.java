@@ -31,7 +31,7 @@ public class StreamsAndFilterExercise {
 		//TODO: implement
 	}
 
-	private static void getStudentsFaildExam(final StudentRecord record, final int olderThan, final String exam) {
+	private static void getStudentsFailedExam(final StudentRecord record, final int olderThan, final String exam) {
 		//TODO: implement
 	}
 
