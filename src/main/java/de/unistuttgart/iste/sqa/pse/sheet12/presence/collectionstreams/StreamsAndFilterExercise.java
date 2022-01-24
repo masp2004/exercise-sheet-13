@@ -19,17 +19,20 @@ public class StreamsAndFilterExercise {
 
 	}
 
-	private static void getStudentName(StudentRecord record) {
+	private static void getStudentName(final StudentRecord record) {
+		//TODO: implement
 	}
 
-	private static void getNumberOfStudentsOlderThan(StudentRecord record, int olderThan) {
+	private static void getNumberOfStudentsOlderThan(final StudentRecord record, final int olderThan) {
+		//TODO: implement
 	}
 
-	private static void getStudentsNameOlderThan(StudentRecord record, int olderThan) {
+	private static void getStudentsNameOlderThan(final StudentRecord record, final int olderThan) {
+		//TODO: implement
 	}
 
-	private static void getStudentsFaildExam(StudentRecord record, int olderThan, String exam) {
-
+	private static void getStudentsFaildExam(final StudentRecord record, final int olderThan, final String exam) {
+		//TODO: implement
 	}
 
 }
