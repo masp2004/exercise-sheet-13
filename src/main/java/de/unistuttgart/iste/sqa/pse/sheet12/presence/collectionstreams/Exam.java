@@ -40,9 +40,6 @@ public class Exam {
 		this.subject = subject;
 	}
 	
-	/*@
-	  @ ensures \result == date;
-	  @*/
 	/**
 	 * @return the date when the exam was created
 	 */
@@ -50,21 +47,15 @@ public class Exam {
 		return date;
 	}
 
-	/*@
-	  @ ensures \result == mark;
-	  @*/
 	/**
-	 * @return returns the mark of the exam
+	 * @return the mark of this exam
 	 */
 	public /*@ pure @*/ double getMark() {
 		return mark;
 	}
 
-	/*@
-	  @ ensures \result == subject;
-	  @*/
 	/**
-	 * @return returns the subject
+	 * @return the subject of this exam
 	 */
 	public /*@ pure @*/ String getSubject() {
 		return subject;
