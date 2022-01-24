@@ -3,13 +3,13 @@ package de.unistuttgart.iste.sqa.pse.sheet12.presence.collectionstreams;
 import java.util.HashSet;
 import java.util.Set;
 
-//@ invariant students != null;
 /**
  * Represents a set of students. The record can be manipulated by adding new students. There is no possiblity
  * to remove students after inserting them to the record.
  */
 public class StudentRecord {
-
+	
+	//@ invariant students != null;
 	private final Set<Student> students;
 
 	public StudentRecord() {
