@@ -2,17 +2,33 @@ package de.unistuttgart.iste.sqa.pse.sheet12.presence.hamsterclub;
 
 /**
  * Individual member of a Club. 
- * @see {@link de.unistuttgart.iste.sqa.pse.exercisesheet12.presence.hamsterclub}
+ * @see de.unistuttgart.iste.sqa.pse.sheet12.presence.hamsterclub.HamsterClub
  * 
  */
 public class ClubMember implements Comparable<ClubMember> {
 	
 	private String name;
 	private int age;
-	private Double contributions;
+	private double contributions;
 	private boolean hasPaidFees;
 	
-	public ClubMember(final String name, final int age, final Double contributions, final boolean hasPaidFees) {
+	/*@
+	  @ requires name != null;
+	  @ requires contributions >= 0;
+ 	  @*/
+	/**
+	 * Constructor of a club member.
+	 * @param name
+	 * @param age
+	 * @param contributions
+	 * @param hasPaidFees
+	 * @throws IllegalArgumentException if name is {@code null} or the contributions are negative.
+	 */
+	public ClubMember(final String name, final int age, final double contributions, final boolean hasPaidFees) 
+		throws IllegalArgumentException {
+		if(name == null || contributions < 0){
+			throw new IllegalArgumentException();
+		}
 		this.name = name;
 		this.age = age;
 		this.contributions = contributions;
@@ -49,27 +65,25 @@ public class ClubMember implements Comparable<ClubMember> {
 		return this.age - arg0.getAge();
 	}
 		
-	
-	//Getter & Setter
-	public String getName() {
+	public /*@ pure @*/ String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getAge() {
+	public /*@ pure @*/ int getAge() {
 		return age;
 	}
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public Double getContributions() {
+	public /*@ pure @*/ double getContributions() {
 		return contributions;
 	}
 	public void setContributions(Double contributions) {
 		this.contributions = contributions;
 	}
-	public boolean getHasPaidContributions() {
+	public /*@ pure @*/ boolean getHasPaidContributions() {
 		return hasPaidFees;
 	}
 	public void setHasPaidContributions(boolean hasPaidFees) {
