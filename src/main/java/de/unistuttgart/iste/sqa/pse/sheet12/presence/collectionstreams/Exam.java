@@ -2,11 +2,6 @@ package de.unistuttgart.iste.sqa.pse.sheet12.presence.collectionstreams;
 
 import java.time.LocalDate;
 
-/*@
-  @ invariant subject != null;
-  @ invariant mark > 1.0 && mark < 6.0;
-  @ invariant date != null;
-  @*/
 /**
  * Represents an exam. 
  * 
@@ -14,6 +9,11 @@ import java.time.LocalDate;
  *
  */
 public class Exam {
+	/*@
+  	  @ invariant subject != null;
+  	  @ invariant mark > 1.0 && mark < 6.0;
+ 	  @ invariant date != null;
+  	  @*/
 
 	private final LocalDate date;
 	private final double mark;
