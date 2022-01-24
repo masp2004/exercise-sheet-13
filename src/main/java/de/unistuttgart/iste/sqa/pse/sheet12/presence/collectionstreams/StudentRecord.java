@@ -3,10 +3,10 @@ package de.unistuttgart.iste.sqa.pse.sheet12.presence.collectionstreams;
 import java.util.HashSet;
 import java.util.Set;
 
+//@ invariant students != null;
 /**
  * Represents a set of students. The record can be manipulated by adding new students. There is no possiblity
  * to remove students after inserting them to the record.
- * Invariant: students!=null
  */
 public class StudentRecord {
 
@@ -16,12 +16,15 @@ public class StudentRecord {
 		this.students = new HashSet<Student>();
 	}
 
+	/*@
+	  @ requires student != null;
+	  @*/
 	/**
 	 * Adds a student to the current record
 	 * @param student student that will be added
-	 * Precondition: student!=null
+	 * @throws IllegalArgumentException if student is {@code null}.
 	 */
-	public void addStudent(final Student student) {
+	public void addStudent(final Student student) throws IllegalArgumentException {
 		if (student == null) {
 			throw new IllegalArgumentException("The given reference to a student object must not be null!");
 		}
