@@ -14,7 +14,7 @@ public class HamsterClub implements Club {
 	private final List<ClubMember> members;
 	private final Comparator<ClubMember> clubComparator;
 	
-	public HamsterClub(final List<ClubMember> members) {
+	public HamsterClub(final List<ClubMember> members) throws IllegalArgumentException {
 		if(members != null) {
 			this.members = members;
 		} else {
@@ -28,21 +28,24 @@ public class HamsterClub implements Club {
 	
 	@Override
 	public List<String> getNameOfMembers() {
+		// TODO: implement
 		return null;
 	}
 
 	@Override
-	public Double getTotalContributions() {
+	public double getTotalContributions() {
+		// TODO: implement
 		return 0.0;
 	}
 
 	@Override
 	public void applyDiscount() {
-	
+		// TODO: implement
 	}
 
 	@Override
 	public List<ClubMember> getMembersWithUnpaidFees() {
+		// TODO: implement
 		return null;
 	}
 
@@ -50,11 +53,13 @@ public class HamsterClub implements Club {
 	 * implement your Comparator here
 	 */
 	private Comparator<ClubMember> generateComparator() {
+		// TODO: implement
 		return null;
 	}
 
 	@Override
 	public ClubMember getOldestMember() {
+		// TODO: implement
 		return null;
 	}
 	
