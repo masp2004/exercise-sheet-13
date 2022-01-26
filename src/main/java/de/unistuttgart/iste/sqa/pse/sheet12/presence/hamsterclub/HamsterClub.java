@@ -15,12 +15,10 @@ public class HamsterClub implements Club {
 	private final Comparator<ClubMember> clubComparator;
 	
 	public HamsterClub(final List<ClubMember> members) throws IllegalArgumentException {
-		if(members != null) {
-			this.members = members;
-		} else {
+		if(members == null) {
 			throw new IllegalArgumentException();
 		}
-		
+		this.members = members;
 		this.clubComparator = generateComparator();
 	}
 	
