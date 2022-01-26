@@ -73,6 +73,4 @@ public class HamsterClubTest {
 		ClubMember expected = club.getMembers().get(2);
 		assertEquals(expected, club.getOldestMember());
 	}
-	
-	
 }
