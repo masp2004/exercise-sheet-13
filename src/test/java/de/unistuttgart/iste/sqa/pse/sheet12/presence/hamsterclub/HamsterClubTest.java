@@ -8,11 +8,6 @@ import java.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
 
-import de.unistuttgart.iste.sqa.pse.sheet12.presence.hamsterclub.Club;
-import de.unistuttgart.iste.sqa.pse.sheet12.presence.hamsterclub.ClubMember;
-import de.unistuttgart.iste.sqa.pse.sheet12.presence.hamsterclub.HamsterClub;
-
-
 public class HamsterClubTest {
 
 	private Club club;
@@ -45,30 +40,23 @@ public class HamsterClubTest {
 	@Test
 	public void testGetNameOfMembers(){
 		ArrayList<String> expected = new ArrayList<>(Arrays.asList("a", "b", "c", "d", "e", "f"));
-		
 		assertEquals(expected, club.getNameOfMembers());
 	}
 	
 	@Test
 	public void testGetTotalContributions(){
 		double expected = 237.0;
-		final double EPSILON = 0.0001;
-		assertEquals(expected, club.getTotalContributions(),EPSILON);
-		
+		double epsilon = 0.0001;
+		assertEquals(expected, club.getTotalContributions(),epsilon);	
 	}
 	
 	@Test
 	public void testApplyDiscount(){
-		ArrayList<ClubMember> list = new ArrayList<>(club.getMembers());
-				
-		Double[] expected = new Double[] {list.get(2).getContributions()*9/10, list.get(3).getContributions()*9/10};						
-				
-		club.applyDiscount();
-				 
+		ArrayList<ClubMember> list = new ArrayList<>(club.getMembers());		
+		Double[] expected = new Double[] {list.get(2).getContributions()*9/10, list.get(3).getContributions()*9/10};								
+		club.applyDiscount();		 
 		Double[] actual = new Double[] {list.get(2).getContributions(), list.get(3).getContributions()};
-
 		assertArrayEquals(expected, actual);
-		
 	}
 	
 	@Test
@@ -77,16 +65,12 @@ public class HamsterClubTest {
 		expected.add(club.getMembers().get(0));
 		expected.add(club.getMembers().get(3));
 		expected.add(club.getMembers().get(5));
-		
 		assertEquals(expected, club.getMembersWithUnpaidFees());
 	}
-	
-	
 	
 	@Test
 	public void testGetOldestMember(){
 		ClubMember expected = club.getMembers().get(2);
-		
 		assertEquals(expected, club.getOldestMember());
 	}
 	
