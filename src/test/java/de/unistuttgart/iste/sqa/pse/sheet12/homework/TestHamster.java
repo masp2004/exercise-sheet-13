@@ -1,19 +1,11 @@
 package de.unistuttgart.iste.sqa.pse.sheet12.homework;
 
 import static org.junit.Assert.assertEquals;
-
-import java.util.function.Consumer;
-
-import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
-
-import de.hamstersimulator.objectsfirst.adapter.InputInterface;
 import de.hamstersimulator.objectsfirst.datatypes.Direction;
 import de.hamstersimulator.objectsfirst.datatypes.Location;
 import de.hamstersimulator.objectsfirst.datatypes.Size;
 import de.hamstersimulator.objectsfirst.external.model.HamsterGame;
-import de.hamstersimulator.objectsfirst.external.model.Territory;
 import de.hamstersimulator.objectsfirst.external.model.TerritoryBuilder;
 import de.hamstersimulator.objectsfirst.external.model.Hamster;
 
