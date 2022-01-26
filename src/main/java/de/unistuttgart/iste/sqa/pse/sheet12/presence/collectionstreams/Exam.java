@@ -24,7 +24,7 @@ public class Exam {
 	  @ requires subject != null;
 	  @*/
 	/**
-	 * Constructor  
+	 * Constructor of an exam. 
 	 * @param mark the mark achieved in this exam (between 1.0 and 6.0)
 	 * @param subject subject of this exam (must not be null)
 	 * @throws IllegalArgumentException if the specified mark is lower than 1.0 
