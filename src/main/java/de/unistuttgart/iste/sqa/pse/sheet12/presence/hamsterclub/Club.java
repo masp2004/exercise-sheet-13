@@ -3,22 +3,22 @@ package de.unistuttgart.iste.sqa.pse.sheet12.presence.hamsterclub;
 import java.util.List;
 
 /**
- * Club Interface providing an array of methods to process a list of club members  
+ * Club Interface providing methods to process a list of club members  .
  */
 public interface Club {
 	/*@  
-	  @ ensures \result only contains the names of all members sorted alphabetically
+	  @ ensures The result contains the names of all members sorted alphabetically;
 	  @*/
 	/**
 	 * Maps the names of all members to a new list of alphabetically sorted Strings.
 	 * 
-	 * @return alph. sorted list of the names of all members
+	 * @return an alphabetically sorted list of the names of all members
 	 */
 	public /*@ pure @*/ List<String> getNameOfMembers();
 	
 	
 	/*@  
-	  @ ensures \result is the sum of all contributions across all members.
+	  @ ensures The result is the sum of all contributions across all members;
 	  @*/
 	/**
 	 * Totals the amount of contributions this club can expect.
@@ -29,7 +29,7 @@ public interface Club {
 	
 	
 	/*@  
-	  @ ensures the contributions of all members above the specified age was reduced by the specific amount
+	  @ ensures The contributions of all members above the specified age was reduced by the specific amount;
 	  @*/
 	/**
 	 * Applies a discount to all members above a certain age. 
@@ -39,10 +39,10 @@ public interface Club {
 	
 	
 	/*@  
-	  @ ensures \result only contains all members with unpaid membership fees
+	  @ ensures The result contains all members with unpaid membership fees;
 	  @*/
 	/**
-	 * Filters the list of members for those that have'nt payed their membership-fees yet.
+	 * Filters the list of members for those that have not payed their membership-fees yet.
 	 * 
 	 * @return list of all members with outstanding fees
 	 */
@@ -50,9 +50,9 @@ public interface Club {
 	
 	
 	/*@  
-	  @ ensures \result is the club member with the highest age value
-	  @ ensures that if two or more members share the highest age value,
-	  @         the member with the alph. highest ranking name is returned   
+	  @ ensures The result is the club member with the highest age value;
+	  @ ensures If two or more members share the highest age value,
+	  @         the member with the alphabetically highest ranking name is returned;   
 	  @*/
 	/**
 	 * Searches the List of members for the oldest individual, alphabetical order acts as a tie-breaker.
@@ -64,12 +64,12 @@ public interface Club {
 	
 	
 	/*@  
-	  @ ensures \result is the exact list of member objects of this club
+	  @ ensures The result is the exact list of member objects of this club;
 	  @*/
 	/**
-	 * Getter Method for the member field.
+	 * Getter method for the member field.
 	 * 
-	 * @return list of members, this club possesses
+	 * @return a list containing the members of this club
 	 */
 	public /*@ pure @*/ List<ClubMember> getMembers();
 	
