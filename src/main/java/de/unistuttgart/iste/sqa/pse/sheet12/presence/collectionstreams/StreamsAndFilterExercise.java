@@ -15,7 +15,7 @@ public class StreamsAndFilterExercise {
 		getStudentName(record);
 		getStudentsNameOlderThan(record, 23);
 		getNumberOfStudentsOlderThan(record, 23);
-		getStudentsFaildExam(record, 25, "PSE");
+		getStudentsFailedExam(record, 25, "PSE");
 
 	}
 
