@@ -51,9 +51,9 @@ public class HamsterClubTest {
 	
 	@Test
 	public void testGetTotalContributions(){
-		Double expected = 237.0;
-		
-		assertEquals(expected, club.getTotalContributions());
+		double expected = 237.0;
+		final double EPSILON = 0.0001;
+		assertEquals(expected, club.getTotalContributions(),EPSILON);
 		
 	}
 	
