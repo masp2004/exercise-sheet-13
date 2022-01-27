@@ -12,14 +12,14 @@ import java.util.List;
 public final class HamsterClub implements Club {
 
 	private final List<ClubMember> members;
-	private final Comparator<ClubMember> clubComparator;
+	private final Comparator<ClubMember> clubMemberComparator;
 	
 	public HamsterClub(final List<ClubMember> members) throws IllegalArgumentException {
 		if(members == null) {
 			throw new IllegalArgumentException();
 		}
 		this.members = members;
-		this.clubComparator = generateComparator();
+		this.clubMemberComparator = generateComparator();
 	}
 	
 	
