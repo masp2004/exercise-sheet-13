@@ -63,11 +63,9 @@ public final class Student {
 	 * @throws IllegalArgumentException if exam is {@code null}.
 	 */
 	public void addExam(final Exam exam) throws IllegalArgumentException {
-
 		if (exam == null) {
 			throw new IllegalArgumentException();
 		}
-
 		writtenExams.put(exam.getSubject(), exam);
 	}
 	
@@ -114,8 +112,8 @@ public final class Student {
 	public /*@ pure @*/ Map<String, Exam> getWrittenExams() {
 		HashMap<String, Exam> copy = new HashMap<>();
 		for(final String key : writtenExams.keySet()) {
-			Exam exam = writtenExams.get(key);
-			Exam copyExam = new Exam(exam.getMark(),exam.getSubject());
+			final Exam exam = writtenExams.get(key);
+			final Exam copyExam = new Exam(exam.getMark(),exam.getSubject());
 			copy.put(key,copyExam);
 		}
 		return copy;
