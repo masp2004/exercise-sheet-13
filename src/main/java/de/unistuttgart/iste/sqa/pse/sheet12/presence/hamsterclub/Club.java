@@ -1,6 +1,7 @@
 package de.unistuttgart.iste.sqa.pse.sheet12.presence.hamsterclub;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 /**
  * Club Interface providing methods to process a list of club members  .
