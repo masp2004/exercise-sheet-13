@@ -110,7 +110,7 @@ public final class Student {
 	}
 
 	public /*@ pure @*/ Map<String, Exam> getWrittenExams() {
-		HashMap<String, Exam> copy = new HashMap<>();
+		final HashMap<String, Exam> copy = new HashMap<>();
 		for(final String key : writtenExams.keySet()) {
 			final Exam exam = writtenExams.get(key);
 			final Exam copyExam = new Exam(exam.getMark(),exam.getSubject());
