@@ -4,8 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>de.unistuttgart.iste.rss.oo.hamstersimulator</groupId>
-	<artifactId>exercise-sheet-12</artifactId>
-	<name>exercise-sheet-12</name>
+	<artifactId>exercise-sheet-13</artifactId>
+	<name>exercise-sheet-13</name>
 	<version>1.0.0</version>
 
 	<properties>
@@ -51,9 +51,9 @@
 				<version>3.0.0</version>
 				<executions>
 					<execution>
-						<id>StreamsAndFilterExercise</id>
+						<id>RegistrationGUI</id>
 						<configuration>
-							<mainClass>de.unistuttgart.iste.sqa.pse.sheet12.presence.collectionstreams.StreamsAndFilterExercise</mainClass>
+							<mainClass>de.unistuttgart.iste.sqa.pse.sheet13.presence.registration.RegistrationGUI</mainClass>
 						</configuration>
 					</execution>
 				</executions>
