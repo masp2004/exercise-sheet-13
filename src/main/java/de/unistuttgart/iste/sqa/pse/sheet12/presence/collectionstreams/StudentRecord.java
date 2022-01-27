@@ -7,7 +7,7 @@ import java.util.Set;
  * Represents a set of students. The record can be manipulated by adding new students. There is no possiblity
  * to remove students after inserting them to the record.
  */
-public class StudentRecord {
+public final class StudentRecord {
 	
 	//@ invariant students != null;
 	private final Set<Student> students;
