@@ -1,4 +1,4 @@
-package de.unistuttgart.iste.sqa.pse.sheet12.presence.hamsterclub;
+package de.unistuttgart.iste.sqa.pse.sheet12.presence.hamsterclubtest;
 
 import static org.junit.Assert.*;
 
@@ -7,6 +7,10 @@ import java.util.Arrays;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import de.unistuttgart.iste.sqa.pse.sheet12.presence.hamsterclub.Club;
+import de.unistuttgart.iste.sqa.pse.sheet12.presence.hamsterclub.ClubMember;
+import de.unistuttgart.iste.sqa.pse.sheet12.presence.hamsterclub.HamsterClub;
 
 public final class HamsterClubTest {
 
