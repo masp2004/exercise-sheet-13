@@ -8,7 +8,7 @@ import java.time.LocalDate;
  * @author mfrank
  *
  */
-public class Exam {
+public final class Exam {
 	/*@
   	  @ invariant subject != null;
   	  @ invariant mark > 1.0 && mark < 6.0;
