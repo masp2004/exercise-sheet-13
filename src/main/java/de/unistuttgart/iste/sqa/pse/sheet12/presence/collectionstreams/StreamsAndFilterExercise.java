@@ -5,10 +5,10 @@ package de.unistuttgart.iste.sqa.pse.sheet12.presence.collectionstreams;
  * Implement the four empty operations in this class properly by using streams.
  * Do not forget to use defensive programming and to comment your code!
  */
-public class StreamsAndFilterExercise {
+public final class StreamsAndFilterExercise {
 
 	public static void main(String[] args) {
-		StudentRecord record = new StudentRecord();
+		final StudentRecord record = new StudentRecord();
 		DataGenerator.fillRecordWithTestData(record);
 		DataGenerator.fillRecordWithRealLifePSEMarks(record);
 
