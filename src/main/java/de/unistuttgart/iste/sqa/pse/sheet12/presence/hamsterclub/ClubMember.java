@@ -4,7 +4,7 @@ package de.unistuttgart.iste.sqa.pse.sheet12.presence.hamsterclub;
  * This class models an individual member of a club. 
  * @see de.unistuttgart.iste.sqa.pse.sheet12.presence.hamsterclub.HamsterClub
  */
-public class ClubMember implements Comparable<ClubMember> {
+public final class ClubMember implements Comparable<ClubMember> {
 	
 	private String name;
 	private int age;
