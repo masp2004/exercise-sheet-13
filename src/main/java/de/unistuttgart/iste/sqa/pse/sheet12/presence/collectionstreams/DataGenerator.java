@@ -9,7 +9,7 @@ import java.util.Random;
  * 
  * @author mfrank
  */
-public class DataGenerator {
+public final class DataGenerator {
 
 	private static final Random markGenerator = new Random();
 
@@ -17,7 +17,6 @@ public class DataGenerator {
 	 * @return Random number between 1.0 and 6.0
 	 */
 	private static int getMarks() {
-
 		return markGenerator.nextInt(5) + 1;
 	}
 
@@ -35,7 +34,6 @@ public class DataGenerator {
 		if(record == null){
 			throw new IllegalArgumentException();	
 		}
-		
 		for (final Student aStudent : record.getAllStudents()) {
 			aStudent.addExam(new Exam(getMarks(), "PSE"));
 		}
@@ -53,7 +51,7 @@ public class DataGenerator {
 			throw new IllegalArgumentException();	
 		}
 
-		DateTimeFormatter df = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+		final DateTimeFormatter df = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
 		record.addStudent(
 				new Student("John", LocalDate.parse("20-08-1996", df), Student.Sex.MALE, "john@uni-stuttgart.de"));
@@ -100,7 +98,7 @@ public class DataGenerator {
 		record.addStudent(
 				new Student("Tanja", LocalDate.parse("01-11-1993", df), Student.Sex.FEMALE, "tanja@uni-stuttgart.de"));
 
-		record.addStudent(new Student("Princes Dimond", LocalDate.parse("11-01-1991", df), Student.Sex.FEMALE,
+		record.addStudent(new Student("Princess Diamond", LocalDate.parse("11-01-1991", df), Student.Sex.FEMALE,
 				"prince.d@uni-stuttgart.de"));
 
 		record.addStudent(
