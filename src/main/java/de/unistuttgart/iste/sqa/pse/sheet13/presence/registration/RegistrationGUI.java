@@ -9,7 +9,7 @@ import java.util.Arrays;
  */
 public class RegistrationGUI {
 
-	private List<String> registratedCustomers = new ArrayList<String>();
+	private final List<String> registratedCustomers = new ArrayList<String>();
 	
 	/**
 	 * Initializes list with some registered customers.
@@ -27,7 +27,7 @@ public class RegistrationGUI {
 		 * @loop_invariant i names were added to registered customers (when i is the number of iterations)
 		 * @decreasing randomNames.size() - i 
 		 */
-		for (String name : randomNames) {
+		for (final String name : randomNames) {
 			registratedCustomers.add(name);
 		}
 	}
