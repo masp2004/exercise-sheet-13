@@ -22,7 +22,7 @@ public class RegistrationGUI {
 	 * Register some random customers by adding them to the registratedCustomers list.
 	 */
 	private void registrateSomeCustomers() {
-		List<String> randomNames = Arrays.asList(new String[] {"Gunnar, Jörg, Michael, Fabian, Petra"});
+		List<String> randomNames = Arrays.asList(new String[] {"Gunnar", "Jörg", "Michael", "Fabian", "Petra"});
 		/*
 		 * @loop_invariant i names were added to registered customers (when i is the number of iterations)
 		 * @decreasing randomNames.size() - i 
