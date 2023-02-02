@@ -5,7 +5,7 @@ package de.unistuttgart.iste.sqa.pse.sheet13.presence.registration;
  * Do not modify!
  */
 public class RegistrationApp {
-	public static void main (String[] args) {
+	public static void main(String[] args) {
 		new RegistrationGUI();
 	}
 }
