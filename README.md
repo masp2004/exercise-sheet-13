@@ -45,5 +45,5 @@ mvn clean compile exec:java@$MAIN_CLASS
 ```
 so, for example:
 ```sh
-mvn clean compile exec:java@StreamsAndFilterExercise
+mvn clean compile exec:java@RegistrationApp
 ```
