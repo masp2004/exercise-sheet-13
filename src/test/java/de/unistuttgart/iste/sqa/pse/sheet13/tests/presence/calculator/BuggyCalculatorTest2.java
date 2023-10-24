@@ -1,4 +1,4 @@
-package de.unistuttgart.iste.sqa.pse.sheet11.tests.presence.calculator;
+package de.unistuttgart.iste.sqa.pse.sheet13.tests.presence.calculator;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -7,8 +7,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import de.unistuttgart.iste.sqa.pse.sheet11.presence.calculator.BuggyCalculator;
-import de.unistuttgart.iste.sqa.pse.sheet11.presence.calculator.Calculator;
+import de.unistuttgart.iste.sqa.pse.sheet13.presence.calculator.BuggyCalculator;
+import de.unistuttgart.iste.sqa.pse.sheet13.presence.calculator.Calculator;
 
 
 public class BuggyCalculatorTest2 {

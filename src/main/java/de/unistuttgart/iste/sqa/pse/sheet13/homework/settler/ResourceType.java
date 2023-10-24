@@ -1,4 +1,4 @@
-package de.unistuttgart.iste.sqa.pse.sheet11.homework.settler;
+package de.unistuttgart.iste.sqa.pse.sheet13.homework.settler;
 
 /**
  * Type of a Resource

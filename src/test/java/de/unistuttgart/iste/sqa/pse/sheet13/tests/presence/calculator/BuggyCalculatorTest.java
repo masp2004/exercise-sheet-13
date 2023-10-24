@@ -1,9 +1,9 @@
-package de.unistuttgart.iste.sqa.pse.sheet11.tests.presence.calculator;
+package de.unistuttgart.iste.sqa.pse.sheet13.tests.presence.calculator;
 
 import org.junit.jupiter.api.BeforeEach;
 
-import de.unistuttgart.iste.sqa.pse.sheet11.presence.calculator.BuggyCalculator;
-import de.unistuttgart.iste.sqa.pse.sheet11.presence.calculator.Calculator;
+import de.unistuttgart.iste.sqa.pse.sheet13.presence.calculator.BuggyCalculator;
+import de.unistuttgart.iste.sqa.pse.sheet13.presence.calculator.Calculator;
 
 /**
  * Tests for Class {@linkplain BuggyCalculator BuggyCalculator}
