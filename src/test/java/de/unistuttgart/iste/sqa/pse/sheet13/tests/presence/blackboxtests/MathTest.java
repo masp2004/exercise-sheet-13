@@ -2,7 +2,7 @@ package de.unistuttgart.iste.sqa.pse.sheet13.tests.presence.blackboxtests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Test;
 
 import de.unistuttgart.iste.sqa.pse.sheet13.presence.blackboxtests.Math;
 
@@ -13,11 +13,11 @@ public class MathTest {
 
 	
 	@Test
-	public void test() {
+	public void exampleTest() {
 		assertEquals(1, Math.floorDiv(2, 2));
 	}
 	
-	// TODO: insert more testcases for 
+	// TODO: insert test cases for exercise sheet here.
 	
 	
 }

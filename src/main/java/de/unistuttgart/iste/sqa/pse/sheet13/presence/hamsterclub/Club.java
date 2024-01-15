@@ -60,9 +60,6 @@ public interface Club {
 	 */
 	public /*@ pure @*/ ClubMember getOldestMember();
 
-	/*@
-	@ ensures The result is the exact list of member objects of this club;
-	@*/
 	/**
 	 * Getter method for the member field.
 	 *

@@ -7,19 +7,21 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import de.unistuttgart.iste.sqa.pse.sheet13.presence.hamsterclub.Club;
 import de.unistuttgart.iste.sqa.pse.sheet13.presence.hamsterclub.ClubMember;
 import de.unistuttgart.iste.sqa.pse.sheet13.presence.hamsterclub.HamsterClub;
 
-
+/**
+ * Test cases to test the functionality of the class {@link HamsterClub}.
+ */
 public final class HamsterClubTest {
 
 	private Club club;
 
-	@BeforeAll
+	@BeforeEach
 	public void setUp() {
 		final ArrayList<ClubMember> members = new ArrayList<>();
 

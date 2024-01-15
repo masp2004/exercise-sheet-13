@@ -4,19 +4,19 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * TODO: Write a description for your HamsterClub class.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * A club of hamsters.
  */
 public final class HamsterClub implements Club {
 
 	private final List<ClubMember> members;
 	private final Comparator<ClubMember> clubMemberComparator;
 
-	/*@
-	@ requires members must not be null;
-	@*/
+	/**
+	 * Create a new {@code HamsterClub}. 
+	 * 
+	 * @param members members of the club. Must not be null.
+	 * @throws IllegalArgumentException if members is null.
+	 */
 	public HamsterClub(final List<ClubMember> members) throws IllegalArgumentException {
 		if (members == null) {
 			throw new IllegalArgumentException();
