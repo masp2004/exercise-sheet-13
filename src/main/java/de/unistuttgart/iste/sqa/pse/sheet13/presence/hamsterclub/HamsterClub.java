@@ -12,8 +12,8 @@ public final class HamsterClub implements Club {
 	private final Comparator<ClubMember> clubMemberComparator;
 
 	/**
-	 * Create a new {@code HamsterClub}. 
-	 * 
+	 * Create a new {@code HamsterClub}.
+	 *
 	 * @param members members of the club. Must not be null.
 	 * @throws IllegalArgumentException if members is null.
 	 */

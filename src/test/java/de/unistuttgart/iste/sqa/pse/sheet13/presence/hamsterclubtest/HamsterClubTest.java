@@ -1,18 +1,15 @@
 package de.unistuttgart.iste.sqa.pse.sheet13.presence.hamsterclubtest;
 
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 import de.unistuttgart.iste.sqa.pse.sheet13.presence.hamsterclub.Club;
 import de.unistuttgart.iste.sqa.pse.sheet13.presence.hamsterclub.ClubMember;
 import de.unistuttgart.iste.sqa.pse.sheet13.presence.hamsterclub.HamsterClub;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test cases to test the functionality of the class {@link HamsterClub}.
@@ -64,8 +61,7 @@ public final class HamsterClubTest {
 				list.get(2).getContributions() * 9 / 10,
 				list.get(3).getContributions() * 9 / 10,
 				list.get(4).getContributions(),
-				list.get(5).getContributions()
-		);
+				list.get(5).getContributions());
 
 		club.applyDiscount();
 
@@ -75,8 +71,7 @@ public final class HamsterClubTest {
 				list.get(2).getContributions(),
 				list.get(3).getContributions(),
 				list.get(4).getContributions(),
-				list.get(5).getContributions()
-		);
+				list.get(5).getContributions());
 
 		assertEquals(expected, actual);
 	}

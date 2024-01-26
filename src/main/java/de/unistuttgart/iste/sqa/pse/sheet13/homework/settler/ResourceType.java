@@ -14,5 +14,4 @@ public class ResourceType {
 	public String getLabel() {
 		return label;
 	}
-	
 }
