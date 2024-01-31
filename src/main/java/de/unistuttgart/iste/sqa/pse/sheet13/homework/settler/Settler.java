@@ -8,7 +8,7 @@ package de.unistuttgart.iste.sqa.pse.sheet13.homework.settler;
 public abstract class Settler {
 
     private final String name;
-    private final Position position;
+    private Position position;
 
     /**
      * Creates a settler.
@@ -23,6 +23,10 @@ public abstract class Settler {
      */
     public void settle() {
         //TODO: implement
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
     }
 
     /**
