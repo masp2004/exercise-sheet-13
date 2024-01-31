@@ -7,13 +7,13 @@ package de.unistuttgart.iste.sqa.pse.sheet13.homework.settler;
  */
 public abstract class Settler {
 
-    private final String name;
+    private String name;
     private Position position;
 
     /**
      * Creates a settler.
      */
-    public Settler(String name, Position position){
+    public Settler(final String name, final Position position){
         this.name = name;
         this.position = position;
     }
