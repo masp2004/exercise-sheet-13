@@ -25,6 +25,9 @@ public abstract class Settler {
         //TODO: implement
     }
 
+    /**
+     * The Settler positions changes.
+     */
     public void setPosition(Position position) {
         this.position = position;
     }
